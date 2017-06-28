@@ -8,7 +8,7 @@ To provide a neatly written, stable and tested, library that will accelerate the
 
 # Install
 ```
-go install github.com/mattrmiller/go-bedrock
+go get github.com/mattrmiller/go-bedrock
 ```
 
 ```
