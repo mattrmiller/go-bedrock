@@ -36,7 +36,7 @@ func TestEnvValues(tst *testing.T) {
 	brtesting.AssertEqual(tst, err, nil, "EnvAsBool failed")
 	b, err = EnvAsBool("TEST_BOOL_INVALID")
 	brtesting.AssertEqual(tst, b, false, "EnvAsBool failed")
-	brtesting.AssertNotEqual(tst, err, ni, "EnvAsBool failed")
+	brtesting.AssertNotEqual(tst, err, nil, "EnvAsBool failed")
 
 	// Test float
 	f, err := EnvAsFloat("TEST_FLOAT_1345")
