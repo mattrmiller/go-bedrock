@@ -5,9 +5,9 @@ The bedrock for your next go project.
 To provide a neatly written, stable and tested, library that will accelerate the development of your next go project.
 
 # Documentation
-- [brstrings](https://godoc.org/github.com/mattrmiller/go-bedrock/brstrings){:target="_blank"}
-- [brtesting](https://godoc.org/github.com/mattrmiller/go-bedrock/brtesting){:target="_blank"}
-- [config](https://godoc.org/github.com/mattrmiller/go-bedrock/config){:target="_blank"}
+- [brstrings](https://godoc.org/github.com/mattrmiller/go-bedrock/brstrings)
+- [brtesting](https://godoc.org/github.com/mattrmiller/go-bedrock/brtesting)
+- [config](https://godoc.org/github.com/mattrmiller/go-bedrock/config)
 
 # Install
 ```
