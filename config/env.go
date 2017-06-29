@@ -1,4 +1,4 @@
-// Package
+// Package config provides useful configuration management functionality
 package config
 
 // Imports
@@ -28,7 +28,7 @@ func EnvAsBool(key string) (bool, error) {
 	return ret, err
 }
 
-// Environment as bool, with panic
+// Environment as bool, with panic on error
 func EnvAsBoolPanic(key string) bool {
 
 	// Get value
@@ -55,7 +55,7 @@ func EnvAsFloat(key string) (float64, error) {
 	return ret, nil
 }
 
-// Environment as float, with panic
+// Environment as float, with panic on error
 func EnvAsFloatPanic(key string) float64 {
 
 	// Get value
@@ -82,7 +82,7 @@ func EnvAsInt(key string) (int, error) {
 	return ret, nil
 }
 
-// Environment as Int, with panic
+// Environment as Int, with panic on error
 func EnvAsIntPanic(key string) int {
 
 	// Get value
@@ -109,7 +109,7 @@ func EnvAsInt64(key string) (int64, error) {
 	return ret, nil
 }
 
-// Environment as Int64, with panic
+// Environment as Int64, with panic on error
 func EnvAsInt64Panic(key string) int64 {
 
 	// Get value
@@ -121,12 +121,12 @@ func EnvAsInt64Panic(key string) int64 {
 	return value
 }
 
-// Environment as slice
-func EnvAsSlice(key, seperator string) []string {
+// Environment variable as slice, defining your own separator to use
+func EnvAsSlice(key, separator string) []string {
 
 	// Get value
 	value := EnvAsString(key)
 
 	// Split
-	return strings.Split(value, seperator)
+	return strings.Split(value, separator)
 }

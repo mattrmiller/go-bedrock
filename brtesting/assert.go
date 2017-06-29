@@ -1,4 +1,4 @@
-// Package
+// Package brstrings provides useful testing functions
 package brtesting
 
 // Imports

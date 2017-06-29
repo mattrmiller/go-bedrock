@@ -1,11 +1,12 @@
-// Package
+// Package config provides useful configuration management functionality
 package config
 
 // Imports
 import (
-	"github.com/mattrmiller/go-bedrock/brtesting"
 	"os"
 	"testing"
+
+	"github.com/mattrmiller/go-bedrock/brtesting"
 )
 
 // Test env values
@@ -61,4 +62,5 @@ func TestEnvValues(tst *testing.T) {
 	is, err = EnvAsInt64("TEST_INT64_INVALID")
 	brtesting.AssertEqual(tst, is, int64(0), "EnvAsInt64 failed")
 	brtesting.AssertNotEqual(tst, err, nil, "EnvAsInt64 failed")
+
 }
