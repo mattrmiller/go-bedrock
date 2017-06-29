@@ -1,5 +1,5 @@
-// Package config provides useful configuration management functionality
-package config
+// Package brconfig provides useful configuration management functionality
+package brconfig
 
 // Imports
 import (

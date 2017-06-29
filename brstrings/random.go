@@ -17,10 +17,10 @@ func RandomString(length int, chars string) string {
 	result := make([]byte, length)
 
 	// Generate
-	for i := 0; i < length; i++ {
-		result[i] = chars[rand.Intn(len(chars))]
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
+	for i := range result {
+		result[i] = chars[r.Intn(len(chars))]
 	}
-
 	return string(result)
 }
 
@@ -29,4 +29,18 @@ func RandomAlphaNumString(length int) string {
 
 	// Random string, with alpha numeric
 	return RandomString(length, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789")
+}
+
+// Random bytes, of defined length
+func RandomBytes(length int) ([]byte, error) {
+
+	// Make result
+	result := make([]byte, length)
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
+	_, err := r.Read(result)
+	if err != nil {
+		return nil, err
+	}
+
+	return result, nil
 }

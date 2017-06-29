@@ -1,5 +1,5 @@
-// Package brstrings provides useful string functions
-package brstrings
+// Package brcrypt provides useful encryption and hashing functions
+package brcrypt
 
 // Imports
 import (
@@ -17,6 +17,7 @@ func HashSha512(value string) string {
 	sha := sha512.New()
 	sha.Write([]byte(value))
 
+	// Format in hex
 	return fmt.Sprintf("%x", sha.Sum(nil))
 }
 
@@ -27,6 +28,7 @@ func HashSha384(value string) string {
 	sha := sha512.New384()
 	sha.Write([]byte(value))
 
+	// Format in hex
 	return fmt.Sprintf("%x", sha.Sum(nil))
 }
 
@@ -37,6 +39,7 @@ func HashSha256(value string) string {
 	sha := sha256.New()
 	sha.Write([]byte(value))
 
+	// Format in hex
 	return fmt.Sprintf("%x", sha.Sum(nil))
 }
 
@@ -47,15 +50,17 @@ func HashSha1(value string) string {
 	sha := sha1.New()
 	sha.Write([]byte(value))
 
+	// Format in hex
 	return fmt.Sprintf("%x", sha.Sum(nil))
 }
 
-// Has in md5
+// Hash in md5
 func HashMd5(value string) string {
 
 	// Md5
 	md5 := md5.New()
 	md5.Write([]byte(value))
 
+	// Format in hex
 	return fmt.Sprintf("%x", md5.Sum(nil))
 }
