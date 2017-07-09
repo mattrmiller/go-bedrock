@@ -1,4 +1,4 @@
-// Package brcrypt provides useful encryption and hashing functions
+// Package brcrypt provides useful encryption and hashing functions.
 package brcrypt
 
 // Imports
@@ -10,7 +10,7 @@ import (
 	"fmt"
 )
 
-// Hash in sha512
+// Hash in SHA512.
 func HashSha512(value string) string {
 
 	// Sha
@@ -21,7 +21,7 @@ func HashSha512(value string) string {
 	return fmt.Sprintf("%x", sha.Sum(nil))
 }
 
-// Hash in sha384
+// Hash in SHA384.
 func HashSha384(value string) string {
 
 	// Sha
@@ -32,7 +32,7 @@ func HashSha384(value string) string {
 	return fmt.Sprintf("%x", sha.Sum(nil))
 }
 
-// Hash in sha256
+// Hash in SHA256.
 func HashSha256(value string) string {
 
 	// Sha
@@ -43,7 +43,7 @@ func HashSha256(value string) string {
 	return fmt.Sprintf("%x", sha.Sum(nil))
 }
 
-// Hash in sha1
+// Hash in SHA1.
 func HashSha1(value string) string {
 
 	// Sha
@@ -54,7 +54,7 @@ func HashSha1(value string) string {
 	return fmt.Sprintf("%x", sha.Sum(nil))
 }
 
-// Hash in md5
+// Hash in MD5.
 func HashMd5(value string) string {
 
 	// Md5

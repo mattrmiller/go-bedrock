@@ -1,4 +1,4 @@
-// Package brcrypt provides useful encryption and hashing functions
+// Package brcrypt provides useful encryption and hashing functions.
 package brcrypt
 
 // Imports
@@ -8,7 +8,7 @@ import (
 	"github.com/mattrmiller/go-bedrock/brtesting"
 )
 
-// Test Sha hashing
+// Test Sha hashing.
 func TestShaHashing(tst *testing.T) {
 
 	// Test sha
@@ -18,7 +18,7 @@ func TestShaHashing(tst *testing.T) {
 	brtesting.AssertEqual(tst, HashSha1("go-bedrock"), "a72d9b86ab715924b1a8d68c857ced3e9cf54eae", "HashSha1 failed")
 }
 
-// Test Md5 hashing
+// Test Md5 hashing.
 func TestMd5Hashing(tst *testing.T) {
 
 	// Test md5

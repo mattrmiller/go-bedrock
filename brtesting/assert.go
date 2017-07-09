@@ -1,4 +1,4 @@
-// Package brstrings provides useful testing functions
+// Package brstrings provides useful testing functions.
 package brtesting
 
 // Imports
@@ -7,7 +7,7 @@ import (
 	"testing"
 )
 
-// Assert equal
+// Assert equal.
 func AssertEqual(tst *testing.T, a interface{}, b interface{}, message string) {
 
 	// Equal?
@@ -16,10 +16,10 @@ func AssertEqual(tst *testing.T, a interface{}, b interface{}, message string) {
 	}
 
 	// Fatal
-	tst.Fatal(fmt.Sprintf("%s :%v != %v", message, a, b))
+	tst.Fatal(fmt.Sprintf("%s: %v != %v", message, a, b))
 }
 
-// Assert not equal
+// Assert not equal.
 func AssertNotEqual(tst *testing.T, a interface{}, b interface{}, message string) {
 
 	// Equal?

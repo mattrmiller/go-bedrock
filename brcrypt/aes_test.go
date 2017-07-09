@@ -1,4 +1,4 @@
-// Package brcrypt provides useful encryption and hashing functions
+// Package brcrypt provides useful encryption and hashing functions.
 package brcrypt
 
 // Imports
@@ -8,7 +8,7 @@ import (
 	"github.com/mattrmiller/go-bedrock/brtesting"
 )
 
-// Test AES-128
+// Test AES-128.
 func TestAes128(tst *testing.T) {
 
 	// Test AES-128
@@ -17,18 +17,18 @@ func TestAes128(tst *testing.T) {
 	brtesting.AssertEqual(tst, errA, nil, "AesEncrypt failed")
 	brtesting.AssertEqual(tst, errB, nil, "AesEncrypt failed")
 	brtesting.AssertNotEqual(tst, string(keyA), string(keyB), "AesEncrypt failed")
-	valueA, errA := AesEncrypt("go-bedrock-secret-value-A", keyA)
-	valueB, errB := AesEncrypt("go-bedrock-secret-value-B", keyB)
+	valueA, errA := AesEncrypt("go-bedrock-secret-aes128-A", keyA)
+	valueB, errB := AesEncrypt("go-bedrock-secret-aes128-B", keyB)
 	brtesting.AssertEqual(tst, errA, nil, "AesEncrypt failed")
 	brtesting.AssertEqual(tst, errB, nil, "AesEncrypt failed")
 	brtesting.AssertNotEqual(tst, valueA, valueB, "AesEncrypt failed")
 	valueC, errA := AesDecrypt(valueA, keyA)
 	valueD, errB := AesDecrypt(valueB, keyB)
-	brtesting.AssertEqual(tst, valueC, "go-bedrock-secret-value-A", "AesDecrypt failed")
-	brtesting.AssertEqual(tst, valueD, "go-bedrock-secret-value-B", "AesDecrypt failed")
+	brtesting.AssertEqual(tst, valueC, "go-bedrock-secret-aes128-A", "AesDecrypt failed")
+	brtesting.AssertEqual(tst, valueD, "go-bedrock-secret-aes128-B", "AesDecrypt failed")
 }
 
-// Test AES-192
+// Test AES-192.
 func TestAes192(tst *testing.T) {
 
 	// Test AES-128
@@ -37,18 +37,18 @@ func TestAes192(tst *testing.T) {
 	brtesting.AssertEqual(tst, errA, nil, "AesEncrypt failed")
 	brtesting.AssertEqual(tst, errB, nil, "AesEncrypt failed")
 	brtesting.AssertNotEqual(tst, string(keyA), string(keyB), "AesEncrypt failed")
-	valueA, errA := AesEncrypt("go-bedrock-secret-value-A", keyA)
-	valueB, errB := AesEncrypt("go-bedrock-secret-value-B", keyB)
+	valueA, errA := AesEncrypt("go-bedrock-secret-aes192-A", keyA)
+	valueB, errB := AesEncrypt("go-bedrock-secret-aes192-B", keyB)
 	brtesting.AssertEqual(tst, errA, nil, "AesEncrypt failed")
 	brtesting.AssertEqual(tst, errB, nil, "AesEncrypt failed")
 	brtesting.AssertNotEqual(tst, valueA, valueB, "AesEncrypt failed")
 	valueC, errA := AesDecrypt(valueA, keyA)
 	valueD, errB := AesDecrypt(valueB, keyB)
-	brtesting.AssertEqual(tst, valueC, "go-bedrock-secret-value-A", "AesDecrypt failed")
-	brtesting.AssertEqual(tst, valueD, "go-bedrock-secret-value-B", "AesDecrypt failed")
+	brtesting.AssertEqual(tst, valueC, "go-bedrock-secret-aes192-A", "AesDecrypt failed")
+	brtesting.AssertEqual(tst, valueD, "go-bedrock-secret-aes192-B", "AesDecrypt failed")
 }
 
-// Test AES-256
+// Test AES-256.
 func TestAes256(tst *testing.T) {
 
 	// Test AES-128
@@ -57,13 +57,13 @@ func TestAes256(tst *testing.T) {
 	brtesting.AssertEqual(tst, errA, nil, "AesEncrypt failed")
 	brtesting.AssertEqual(tst, errB, nil, "AesEncrypt failed")
 	brtesting.AssertNotEqual(tst, string(keyA), string(keyB), "AesEncrypt failed")
-	valueA, errA := AesEncrypt("go-bedrock-secret-value-A", keyA)
-	valueB, errB := AesEncrypt("go-bedrock-secret-value-B", keyB)
+	valueA, errA := AesEncrypt("go-bedrock-secret-aes256-A", keyA)
+	valueB, errB := AesEncrypt("go-bedrock-secret-aes256-B", keyB)
 	brtesting.AssertEqual(tst, errA, nil, "AesEncrypt failed")
 	brtesting.AssertEqual(tst, errB, nil, "AesEncrypt failed")
 	brtesting.AssertNotEqual(tst, valueA, valueB, "AesEncrypt failed")
 	valueC, errA := AesDecrypt(valueA, keyA)
 	valueD, errB := AesDecrypt(valueB, keyB)
-	brtesting.AssertEqual(tst, valueC, "go-bedrock-secret-value-A", "AesDecrypt failed")
-	brtesting.AssertEqual(tst, valueD, "go-bedrock-secret-value-B", "AesDecrypt failed")
+	brtesting.AssertEqual(tst, valueC, "go-bedrock-secret-aes256-A", "AesDecrypt failed")
+	brtesting.AssertEqual(tst, valueD, "go-bedrock-secret-aes256-B", "AesDecrypt failed")
 }

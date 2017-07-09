@@ -1,4 +1,4 @@
-// Package brcrypt provides useful encryption and hashing functions
+// Package brcrypt provides useful encryption and hashing functions.
 package brcrypt
 
 // Imports
@@ -21,28 +21,29 @@ const (
 	KEY_LENGTH_256 = 32
 )
 
-// Generate key for AES-128
+// Generate key for AES-128.
 func AesKey128() ([]byte, error) {
 
 	// Generate random bytes
 	return brstrings.RandomBytes(KEY_LENGTH_128)
 }
 
-// Generate key for AES-192
+// Generate key for AES-192.
 func AesKey192() ([]byte, error) {
 
 	// Generate randome bytes
 	return brstrings.RandomBytes(KEY_LENGTH_192)
 }
 
-// Generate key for AES-256
+// Generate key for AES-256.
 func AesKey256() ([]byte, error) {
 
-	// Generate random bytes
+	// Generate random bytes.
 	return brstrings.RandomBytes(KEY_LENGTH_256)
 }
 
-// Aes encrypt value with key, depending on key length determines the AES algorithm that will be used
+// Aes encrypt in GCM mode value with key, depending on key length determines
+// the AES algorithm that will be used.
 func AesEncrypt(value string, key []byte) (string, error) {
 
 	// Create cipher
@@ -68,7 +69,21 @@ func AesEncrypt(value string, key []byte) (string, error) {
 	return fmt.Sprintf("%x", encrypted), nil
 }
 
-// Aes decrypt value with key, depending on key length determines the AES algorithm that will be used
+// Aes encrypt in GCM mode value with key, depending on key length determines
+// the AES algorithm that will be used. Panics on error.
+func MustAesEncrypt(value string, key []byte) string {
+
+	// Encrypt
+	ret, err := AesEncrypt(value, key)
+	if err != nil {
+		panic(err)
+	}
+
+	return ret
+}
+
+// Aes decrypt in GCM mode value with key, depending on key length determines
+// the AES algorithm that will be used.
 func AesDecrypt(value string, key []byte) (string, error) {
 
 	// Cipher text
@@ -103,4 +118,17 @@ func AesDecrypt(value string, key []byte) (string, error) {
 
 	// Format in hex
 	return string(unCipherValue), nil
+}
+
+// Aes decrypt in GCM mode value with key, depending on key length determines
+// the AES algorithm that will be used. Panics on error.
+func MustAesDecrypt(value string, key []byte) string {
+
+	// Decrypt
+	ret, err := AesDecrypt(value, key)
+	if err != nil {
+		panic(err)
+	}
+
+	return ret
 }

@@ -1,4 +1,4 @@
-// Package brstrings provides useful string functions
+// Package brstrings provides useful string functions.
 package brstrings
 
 // Imports
@@ -8,7 +8,7 @@ import (
 	"github.com/mattrmiller/go-bedrock/brtesting"
 )
 
-// Test random strings
+// Test random strings.
 func TestRandomStrings(tst *testing.T) {
 
 	// Test random alpha numeric
@@ -17,7 +17,7 @@ func TestRandomStrings(tst *testing.T) {
 	brtesting.AssertNotEqual(tst, r1, r2, "RandomAlphaNumString failed")
 }
 
-// Test random bytes
+// Test random bytes.
 func TestRandomBytes(tst *testing.T) {
 
 	// Test random bytes

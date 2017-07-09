@@ -1,4 +1,4 @@
-// Package brcrypt provides useful encryption and hashing functions
+// Package brcrypt provides useful encryption and hashing functions.
 package brcrypt
 
 // Imports
@@ -6,7 +6,7 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
-// Bcrypt hash with defined number of cycles
+// Bcrypt hash with defined number of cycles.
 func BcryptHash(value string, cycles int) (string, error) {
 
 	// Hash
@@ -18,7 +18,19 @@ func BcryptHash(value string, cycles int) (string, error) {
 	return string(ret), nil
 }
 
-// Bcrypt hash compare
+// Bcrypt hash with defined number of cycles. Panics on error.
+func MustBcryptHash(value string, cycles int) string {
+
+	// Hash
+	ret, err := BcryptHash(value, cycles)
+	if err != nil {
+		panic(err)
+	}
+
+	return ret
+}
+
+// Bcrypt hash compare.
 func BcryptPasswordCompare(hashA string, hashB string) error {
 
 	// Compare hashes

@@ -7,6 +7,7 @@ To provide a neatly written, stable and tested, library that will accelerate the
 # Documentation
 - [go-bedrock/brconfig](https://godoc.org/github.com/mattrmiller/go-bedrock/brconfig)
 - [go-bedrock/brcrypt](https://godoc.org/github.com/mattrmiller/go-bedrock/brcrypt)
+- [go-bedrock/brencoding](https://godoc.org/github.com/mattrmiller/go-bedrock/brencoding)
 - [go-bedrock/brstrings](https://godoc.org/github.com/mattrmiller/go-bedrock/brstrings)
 - [go-bedrock/brtesting](https://godoc.org/github.com/mattrmiller/go-bedrock/brtesting)
 

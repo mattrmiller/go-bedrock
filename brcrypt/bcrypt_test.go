@@ -1,4 +1,4 @@
-// Package brcrypt provides useful encryption and hashing functions
+// Package brcrypt provides useful encryption and hashing functions.
 package brcrypt
 
 // Imports
@@ -21,4 +21,7 @@ func TestBcryptHashing(tst *testing.T) {
 	brtesting.AssertNotEqual(tst, hashA, hashB, "BcryptHash failed")
 	brtesting.AssertNotEqual(tst, hashB, hashC, "BcryptHash failed")
 	brtesting.AssertNotEqual(tst, hashA, hashC, "BcryptHash failed")
+	brtesting.AssertEqual(tst, BcryptPasswordCompare(hashA, "go-bedrock-secret-value-A"), nil, "BcryptHash failed")
+	brtesting.AssertEqual(tst, BcryptPasswordCompare(hashB, "go-bedrock-secret-value-B"), nil, "BcryptHash failed")
+	brtesting.AssertEqual(tst, BcryptPasswordCompare(hashC, "go-bedrock-secret-value-C"), nil, "BcryptHash failed")
 }

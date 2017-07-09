@@ -1,4 +1,4 @@
-// Package brstrings provides useful string functions
+// Package brstrings provides useful string functions.
 package brstrings
 
 // Imports
@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-// Random string of defined length, defining your list of characters to use
+// Random string of defined length, defining your list of characters to use.
 func RandomString(length int, chars string) string {
 
 	// Seed random
@@ -24,14 +24,14 @@ func RandomString(length int, chars string) string {
 	return string(result)
 }
 
-// Random alpha numeric string, of defined length
+// Random alpha numeric string, of defined length.
 func RandomAlphaNumString(length int) string {
 
 	// Random string, with alpha numeric
 	return RandomString(length, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789")
 }
 
-// Random bytes, of defined length
+// Random bytes, of defined length.
 func RandomBytes(length int) ([]byte, error) {
 
 	// Make result
@@ -43,4 +43,16 @@ func RandomBytes(length int) ([]byte, error) {
 	}
 
 	return result, nil
+}
+
+// Random bytes, of defined length. Panics on error.
+func MustRandomBytes(length int) []byte {
+
+	// Random
+	ret, err := RandomBytes(length)
+	if err != nil {
+		panic(err)
+	}
+
+	return ret
 }

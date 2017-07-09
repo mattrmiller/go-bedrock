@@ -1,4 +1,4 @@
-// Package brconfig provides useful configuration management functionality
+// Package brconfig provides useful configuration management functionality.
 package brconfig
 
 // Imports
@@ -9,7 +9,7 @@ import (
 	"github.com/mattrmiller/go-bedrock/brtesting"
 )
 
-// Test env values
+// Test env values.
 func TestEnvValues(tst *testing.T) {
 
 	// Set some values
