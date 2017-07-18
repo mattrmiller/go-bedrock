@@ -1,6 +1,9 @@
 # go-bedrock
 The bedrock for your next go project.
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/mattrmiller/go-bedrock)](https://goreportcard.com/report/github.com/mattrmiller/go-bedrock)
+[![godocs](https://img.shields.io/badge/godocs-1.0.0-blue.svg)](https://godoc.org/github.com/mattrmiller/go-bedrock)
+
 # Mission Statement
 To provide a neatly written, stable and tested, library that will accelerate the development of your next go project.
 
