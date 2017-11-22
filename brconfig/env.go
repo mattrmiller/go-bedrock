@@ -3,10 +3,10 @@ package brconfig
 
 // Imports
 import (
+	"github.com/mattrmiller/go-bedrock/brstrings"
+
 	"os"
 	"strings"
-
-	"github.com/mattrmiller/go-bedrock/brstrings"
 )
 
 // Environment as string.

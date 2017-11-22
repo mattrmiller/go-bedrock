@@ -13,16 +13,16 @@ import (
 func TestEnvValues(tst *testing.T) {
 
 	// Set some values
-	os.Setenv("TEST_STRING_HELLO", "hello")
-	os.Setenv("TEST_BOOL_TRUE", "true")
-	os.Setenv("TEST_BOOL_FALSE", "false")
-	os.Setenv("TEST_BOOL_INVALID", "invalid value")
-	os.Setenv("TEST_FLOAT_1345", "1.345")
-	os.Setenv("TEST_FLOAT_INVALID", "invalid value")
-	os.Setenv("TEST_INT_80", "80")
-	os.Setenv("TEST_INT_INVALID", "invalid value")
-	os.Setenv("TEST_INT64_100", "100")
-	os.Setenv("TEST_INT64_INVALID", "invalid value")
+	_ = os.Setenv("TEST_STRING_HELLO", "hello")
+	_ = os.Setenv("TEST_BOOL_TRUE", "true")
+	_ = os.Setenv("TEST_BOOL_FALSE", "false")
+	_ = os.Setenv("TEST_BOOL_INVALID", "invalid value")
+	_ = os.Setenv("TEST_FLOAT_1345", "1.345")
+	_ = os.Setenv("TEST_FLOAT_INVALID", "invalid value")
+	_ = os.Setenv("TEST_INT_80", "80")
+	_ = os.Setenv("TEST_INT_INVALID", "invalid value")
+	_ = os.Setenv("TEST_INT64_100", "100")
+	_ = os.Setenv("TEST_INT64_INVALID", "invalid value")
 
 	// Test string
 	s := EnvAsString("TEST_STRING_HELLO")
