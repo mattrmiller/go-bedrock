@@ -25,22 +25,14 @@ import (
 )
 ```
 
-# Rules For Contributing
-- Please make sure all changed files are run through gofmt
-- Submit a PR for review
-- Your name will be added below to Contributors
+## Contributing
+See the [Contributing Guide](/CONTRIBUTING.md) for steps on how to contribute to this project.
 
-# Helpful Bash Additions
-Test recursively, all go tests, in current folder:
-```
-alias go-testall='go test $(go list ./... | grep -v vendor)'
-```
-
-# Author
+## Author
 [Matthew R. Miller](https://github.com/mattrmiller)
 
-# Contributors
+## Contributors
 [Matthew R. Miller](https://github.com/mattrmiller)
 
-# License
+## License
 [MIT License](LICENSE)
