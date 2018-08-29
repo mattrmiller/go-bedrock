@@ -28,6 +28,11 @@ import (
 ## Contributing
 See the [Contributing Guide](/CONTRIBUTING.md) for steps on how to contribute to this project.
 
+## Feedback
+Feedback is greatly appreciated. This project is interested in feedback centered on the user experience of the tool. Workflows that the tool supports well, or don't
+support at all? Do any of the commands have surprising effects, output, or results? Please file an issue, describing what you did or wanted to do, what you expected
+to happen, and what actually happened.
+
 ## Author
 [Matthew R. Miller](https://github.com/mattrmiller)
 
