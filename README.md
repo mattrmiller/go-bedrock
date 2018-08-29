@@ -15,11 +15,11 @@ To provide a neatly written, stable and tested, library that will accelerate the
 - [go-bedrock/brtesting](https://godoc.org/github.com/mattrmiller/go-bedrock/brtesting)
 
 # Install
-```
+```go
 go get github.com/mattrmiller/go-bedrock
 ```
 
-```
+```go
 import (
     bedrock "github.com/mattrmiller/go-bedrock"
 )
