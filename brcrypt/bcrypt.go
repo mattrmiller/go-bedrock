@@ -6,7 +6,7 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
-// Bcrypt hash with defined number of cycles.
+// BcryptHash Bcrypt hash with defined number of cycles.
 func BcryptHash(value string, cycles int) (string, error) {
 
 	// Hash
@@ -18,7 +18,7 @@ func BcryptHash(value string, cycles int) (string, error) {
 	return string(ret), nil
 }
 
-// Bcrypt hash with defined number of cycles. Panics on error.
+// MustBcryptHash Bcrypt hash with defined number of cycles. Panics on error.
 func MustBcryptHash(value string, cycles int) string {
 
 	// Hash
@@ -30,7 +30,7 @@ func MustBcryptHash(value string, cycles int) string {
 	return ret
 }
 
-// Bcrypt hash compare.
+// BcryptPasswordCompare Bcrypt hash compare.
 func BcryptPasswordCompare(hashA string, hashB string) error {
 
 	// Compare hashes

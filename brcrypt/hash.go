@@ -10,7 +10,7 @@ import (
 	"fmt"
 )
 
-// Hash in SHA512.
+// HashSha512 Hash in SHA512.
 func HashSha512(value string) string {
 
 	// Sha
@@ -21,7 +21,7 @@ func HashSha512(value string) string {
 	return fmt.Sprintf("%x", sha.Sum(nil))
 }
 
-// Hash in SHA384.
+// HashSha384 Hash in SHA384.
 func HashSha384(value string) string {
 
 	// Sha
@@ -32,7 +32,7 @@ func HashSha384(value string) string {
 	return fmt.Sprintf("%x", sha.Sum(nil))
 }
 
-// Hash in SHA256.
+// HashSha256 Hash in SHA256.
 func HashSha256(value string) string {
 
 	// Sha
@@ -43,7 +43,7 @@ func HashSha256(value string) string {
 	return fmt.Sprintf("%x", sha.Sum(nil))
 }
 
-// Hash in SHA1.
+// HashSha1 Hash in SHA1.
 func HashSha1(value string) string {
 
 	// Sha
@@ -54,7 +54,7 @@ func HashSha1(value string) string {
 	return fmt.Sprintf("%x", sha.Sum(nil))
 }
 
-// Hash in MD5.
+// HashMd5 Hash in MD5.
 func HashMd5(value string) string {
 
 	// Md5

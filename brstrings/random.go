@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-// Random string of defined length, defining your list of characters to use.
+// RandomString Generates random string of defined length, defining your list of characters to use.
 func RandomString(length int, chars string) string {
 
 	// Seed random
@@ -24,14 +24,14 @@ func RandomString(length int, chars string) string {
 	return string(result)
 }
 
-// Random alpha numeric string, of defined length.
+// RandomAlphaNumString Generates random alpha numeric string, of defined length.
 func RandomAlphaNumString(length int) string {
 
 	// Random string, with alpha numeric
 	return RandomString(length, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789")
 }
 
-// Random bytes, of defined length.
+// RandomBytes Generates random bytes, of defined length.
 func RandomBytes(length int) ([]byte, error) {
 
 	// Make result
@@ -45,7 +45,7 @@ func RandomBytes(length int) ([]byte, error) {
 	return result, nil
 }
 
-// Random bytes, of defined length. Panics on error.
+// MustRandomBytes Generates random bytes, of defined length. Panics on error.
 func MustRandomBytes(length int) []byte {
 
 	// Random

@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-// String to bool.
+// StringToBool Converts string to bool.
 func StringToBool(value string) (bool, error) {
 
 	// Parse float
@@ -19,7 +19,7 @@ func StringToBool(value string) (bool, error) {
 	return ret, err
 }
 
-// String to bool.
+// MustStringToBool Converts string to bool. Panics on error.
 func MustStringToBool(value string) bool {
 
 	// Parse float
@@ -31,7 +31,7 @@ func MustStringToBool(value string) bool {
 	return ret
 }
 
-// String to int.
+// StringToInt Converts string to int.
 func StringToInt(value string) (int, error) {
 
 	// Convert to Int
@@ -43,7 +43,7 @@ func StringToInt(value string) (int, error) {
 	return ret, nil
 }
 
-// String to int. Panics on error.
+// MustStringToInt Converts string to int. Panics on error.
 func MustStringToInt(value string) int {
 
 	// Convert to Int
@@ -55,7 +55,7 @@ func MustStringToInt(value string) int {
 	return ret
 }
 
-// String to int64.
+// StringToInt64 Converts string to int64.
 func StringToInt64(value string) (int64, error) {
 
 	// Parse int
@@ -67,7 +67,7 @@ func StringToInt64(value string) (int64, error) {
 	return ret, nil
 }
 
-// String to int64. Panics on error.
+// MustStringToInt64 Converts string to int64. Panics on error.
 func MustStringToInt64(value string) int64 {
 
 	// Parse int
@@ -79,7 +79,7 @@ func MustStringToInt64(value string) int64 {
 	return ret
 }
 
-// String to float.
+// StringToFloat Converts string to float.
 func StringToFloat(value string) (float64, error) {
 
 	// Parse float
@@ -91,7 +91,7 @@ func StringToFloat(value string) (float64, error) {
 	return ret, nil
 }
 
-// String to float. Panics on error.
+// MustStringToFloat Converts string to float. Panics on error.
 func MustStringToFloat(value string) float64 {
 
 	// Parse float

@@ -16,33 +16,33 @@ import (
 
 // Constants
 const (
-	KEY_LENGTH_128 = 16
-	KEY_LENGTH_192 = 24
-	KEY_LENGTH_256 = 32
+	AesKeyLength128 = 16
+	AesKeyLength192 = 24
+	AesKeyLength256 = 32
 )
 
-// Generate key for AES-128.
+// AesKey128 Generate key for AES-128.
 func AesKey128() ([]byte, error) {
 
 	// Generate random bytes
-	return brstrings.RandomBytes(KEY_LENGTH_128)
+	return brstrings.RandomBytes(AesKeyLength128)
 }
 
-// Generate key for AES-192.
+// AesKey192 Generate key for AES-192.
 func AesKey192() ([]byte, error) {
 
 	// Generate randome bytes
-	return brstrings.RandomBytes(KEY_LENGTH_192)
+	return brstrings.RandomBytes(AesKeyLength192)
 }
 
-// Generate key for AES-256.
+// AesKey256 Generate key for AES-256.
 func AesKey256() ([]byte, error) {
 
 	// Generate random bytes.
-	return brstrings.RandomBytes(KEY_LENGTH_256)
+	return brstrings.RandomBytes(AesKeyLength256)
 }
 
-// Aes encrypt in GCM mode value with key, depending on key length determines
+// AesEncrypt Aes encrypt in GCM mode value with key, depending on key length determines
 // the AES algorithm that will be used.
 func AesEncrypt(value string, key []byte) (string, error) {
 
@@ -69,7 +69,7 @@ func AesEncrypt(value string, key []byte) (string, error) {
 	return fmt.Sprintf("%x", encrypted), nil
 }
 
-// Aes encrypt in GCM mode value with key, depending on key length determines
+// MustAesEncrypt Aes encrypt in GCM mode value with key, depending on key length determines
 // the AES algorithm that will be used. Panics on error.
 func MustAesEncrypt(value string, key []byte) string {
 
@@ -82,7 +82,7 @@ func MustAesEncrypt(value string, key []byte) string {
 	return ret
 }
 
-// Aes decrypt in GCM mode value with key, depending on key length determines
+// AesDecrypt Aes decrypt in GCM mode value with key, depending on key length determines
 // the AES algorithm that will be used.
 func AesDecrypt(value string, key []byte) (string, error) {
 
@@ -120,7 +120,7 @@ func AesDecrypt(value string, key []byte) (string, error) {
 	return string(unCipherValue), nil
 }
 
-// Aes decrypt in GCM mode value with key, depending on key length determines
+// MustAesDecrypt Aes decrypt in GCM mode value with key, depending on key length determines
 // the AES algorithm that will be used. Panics on error.
 func MustAesDecrypt(value string, key []byte) string {
 

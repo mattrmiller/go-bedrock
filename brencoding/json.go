@@ -6,8 +6,8 @@ import (
 	"encoding/json"
 )
 
-// Encode Json.
-func EncodeJson(payload interface{}) (string, error) {
+// EncodeJSON Encode JSON payload.
+func EncodeJSON(payload interface{}) (string, error) {
 
 	// Marshal
 	ret, err := json.Marshal(payload)
@@ -18,8 +18,8 @@ func EncodeJson(payload interface{}) (string, error) {
 	return string(ret), nil
 }
 
-// Encode Json. Panics on error.
-func MustEncodeJson(payload interface{}) string {
+// MustEncodeJSON Encode JSON payload. Panics on error.
+func MustEncodeJSON(payload interface{}) string {
 
 	// Marshal
 	ret, err := json.Marshal(payload)
@@ -30,8 +30,8 @@ func MustEncodeJson(payload interface{}) string {
 	return string(ret)
 }
 
-// Encode Json in a pretty format with specified indenting.
-func EncodeJsonPretty(payload interface{}, indent string) (string, error) {
+// EncodeJSONPretty Encode JSON payload in a pretty format with specified indenting.
+func EncodeJSONPretty(payload interface{}, indent string) (string, error) {
 
 	// Marshal
 	ret, err := json.MarshalIndent(payload, "", indent)
@@ -42,8 +42,8 @@ func EncodeJsonPretty(payload interface{}, indent string) (string, error) {
 	return string(ret), nil
 }
 
-// Encode Json in a pretty format with specified indenting.
-func MustEncodeJsonPretty(payload interface{}, indent string) string {
+// MustEncodeJSONPretty Encode JSON payload in a pretty format with specified indenting.
+func MustEncodeJSONPretty(payload interface{}, indent string) string {
 
 	// Marshal
 	ret, err := json.MarshalIndent(payload, "", indent)
@@ -54,8 +54,8 @@ func MustEncodeJsonPretty(payload interface{}, indent string) string {
 	return string(ret)
 }
 
-// Decode Json.
-func DecodeJson(payload string) (map[string]interface{}, error) {
+// DecodeJSON Decode JSON payload.
+func DecodeJSON(payload string) (map[string]interface{}, error) {
 
 	// Return
 	var ret interface{}
@@ -69,8 +69,8 @@ func DecodeJson(payload string) (map[string]interface{}, error) {
 	return ret.(map[string]interface{}), nil
 }
 
-// Decode Json. Panics on error.
-func MustDecodeJson(payload string) map[string]interface{} {
+// MustDecodeJSON Decode JSON payload. Panics on error.
+func MustDecodeJSON(payload string) map[string]interface{} {
 
 	// Return
 	var ret interface{}

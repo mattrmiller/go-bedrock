@@ -9,12 +9,12 @@ import (
 	"strings"
 )
 
-// Environment as string.
+// EnvAsString Environment as string.
 func EnvAsString(key string) string {
 	return os.Getenv(key)
 }
 
-// Environment as bool.
+// EnvAsBool Environment as bool.
 func EnvAsBool(key string) (bool, error) {
 
 	// Get value
@@ -29,7 +29,7 @@ func EnvAsBool(key string) (bool, error) {
 	return ret, err
 }
 
-// Environment as bool. Panics on error.
+// MustEnvAsBool Environment as bool. Panics on error.
 func MustEnvAsBool(key string) bool {
 
 	// Get value
@@ -41,7 +41,7 @@ func MustEnvAsBool(key string) bool {
 	return value
 }
 
-// Environment as Int.
+// EnvAsInt Environment as Int.
 func EnvAsInt(key string) (int, error) {
 
 	// Get value
@@ -56,7 +56,7 @@ func EnvAsInt(key string) (int, error) {
 	return ret, nil
 }
 
-// Environment as Int. Panics on error.
+// MustEnvAsInt Environment as Int. Panics on error.
 func MustEnvAsInt(key string) int {
 
 	// Get value
@@ -68,7 +68,7 @@ func MustEnvAsInt(key string) int {
 	return value
 }
 
-// Environment as Int64.
+// EnvAsInt64 Environment as Int64.
 func EnvAsInt64(key string) (int64, error) {
 
 	// Get value
@@ -83,7 +83,7 @@ func EnvAsInt64(key string) (int64, error) {
 	return ret, nil
 }
 
-// Environment as Int64. Panics on error.
+// MustEnvAsInt64 Environment as Int64. Panics on error.
 func MustEnvAsInt64(key string) int64 {
 
 	// Get value
@@ -95,7 +95,7 @@ func MustEnvAsInt64(key string) int64 {
 	return value
 }
 
-// Environment as float.
+// EnvAsFloat Environment as float.
 func EnvAsFloat(key string) (float64, error) {
 
 	// Get value
@@ -110,7 +110,7 @@ func EnvAsFloat(key string) (float64, error) {
 	return ret, nil
 }
 
-// Environment as float. Panics on error.
+// MustEnvAsFloat Environment as float. Panics on error.
 func MustEnvAsFloat(key string) float64 {
 
 	// Get value
@@ -122,7 +122,7 @@ func MustEnvAsFloat(key string) float64 {
 	return value
 }
 
-// Environment variable as slice, defining your own separator to use.
+// EnvAsSlice Environment variable as slice, defining your own separator to use.
 func EnvAsSlice(key, separator string) []string {
 
 	// Get value

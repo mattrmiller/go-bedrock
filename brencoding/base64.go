@@ -6,14 +6,14 @@ import (
 	"encoding/base64"
 )
 
-// Base64 encode, as defined in RFC 4648.
+// Base64Encode Base64 encode, as defined in RFC 4648.
 func Base64Encode(value string) string {
 
 	// Encode
 	return base64.StdEncoding.EncodeToString([]byte(value))
 }
 
-// Base64 decode, as defined in RFC 4648.
+// Base64Decode Base64 decode, as defined in RFC 4648.
 func Base64Decode(value string) (string, error) {
 
 	// Decode
@@ -26,7 +26,7 @@ func Base64Decode(value string) (string, error) {
 	return string(ret), nil
 }
 
-// Base64 decode, as defined in RFC 4648. Panics on error.
+// MustBase64Decode Base64 decode, as defined in RFC 4648. Panics on error.
 func MustBase64Decode(value string) string {
 
 	// Decode
@@ -39,7 +39,7 @@ func MustBase64Decode(value string) string {
 	return ret
 }
 
-// Base64 encode, using URLEncoding is the alternate base64 encoding defined in
+// Base64UrlEncode Base64 encode, using URLEncoding is the alternate base64 encoding defined in
 // RFC 4648. It is typically used in URLs and file names.
 func Base64UrlEncode(value string) string {
 
@@ -47,7 +47,7 @@ func Base64UrlEncode(value string) string {
 	return base64.URLEncoding.EncodeToString([]byte(value))
 }
 
-// Base64 decode, using URLEncoding is the alternate base64 encoding defined in
+// Base64UrlDecode Base64 decode, using URLEncoding is the alternate base64 encoding defined in
 // RFC 4648. It is typically used in URLs and file names.
 func Base64UrlDecode(value string) (string, error) {
 
@@ -61,7 +61,7 @@ func Base64UrlDecode(value string) (string, error) {
 	return string(ret), nil
 }
 
-// Base64 decode, using URLEncoding is the alternate base64 encoding defined in
+// MustBase64UrlDecode Base64 decode, using URLEncoding is the alternate base64 encoding defined in
 // RFC 4648. It is typically used in URLs and file names. Panics on error.
 func MustBase64UrlDecode(value string) string {
 
@@ -75,7 +75,7 @@ func MustBase64UrlDecode(value string) string {
 	return ret
 }
 
-// Base64 encode, as defined in RFC 4648. This is the same as standard encoding
+// Base64EncodeNoPadding Base64 encode, as defined in RFC 4648. This is the same as standard encoding
 // but omits padding characters.
 func Base64EncodeNoPadding(value string) string {
 
@@ -83,7 +83,7 @@ func Base64EncodeNoPadding(value string) string {
 	return base64.RawStdEncoding.EncodeToString([]byte(value))
 }
 
-// Base64 decode, as defined in RFC 4648. This is the same as standard encoding
+// Base64DecodeNoPadding Base64 decode, as defined in RFC 4648. This is the same as standard encoding
 // but omits padding characters.
 func Base64DecodeNoPadding(value string) (string, error) {
 
@@ -97,7 +97,7 @@ func Base64DecodeNoPadding(value string) (string, error) {
 	return string(ret), nil
 }
 
-// Base64 decode, as defined in RFC 4648. This is the same as standard encoding
+// MustBase64DecodeNoPadding Base64 decode, as defined in RFC 4648. This is the same as standard encoding
 // but omits padding characters. Panics on error.
 func MustBase64DecodeNoPadding(value string) string {
 
@@ -111,7 +111,7 @@ func MustBase64DecodeNoPadding(value string) string {
 	return ret
 }
 
-// Base64 encode, using URLEncoding is the alternate base64 encoding defined in
+// Base64UrlEncodeNoPadding Base64 encode, using URLEncoding is the alternate base64 encoding defined in
 // RFC 4648. It is typically used in URLs and file names. This is the same as
 // url encoding but omits padding characters.
 func Base64UrlEncodeNoPadding(value string) string {
@@ -120,7 +120,7 @@ func Base64UrlEncodeNoPadding(value string) string {
 	return base64.RawURLEncoding.EncodeToString([]byte(value))
 }
 
-// Base64 decode, using URLEncoding is the alternate base64 encoding defined in
+// Base64UrlDecodeNoPadding Base64 decode, using URLEncoding is the alternate base64 encoding defined in
 // RFC 4648. It is typically used in URLs and file names. This is the same as
 // url encoding but omits padding characters.
 func Base64UrlDecodeNoPadding(value string) (string, error) {
@@ -135,7 +135,7 @@ func Base64UrlDecodeNoPadding(value string) (string, error) {
 	return string(ret), nil
 }
 
-// Base64 decode, using URLEncoding is the alternate base64 encoding defined in
+// MustBase64UrlDecodeNoPadding Base64 decode, using URLEncoding is the alternate base64 encoding defined in
 // RFC 4648. It is typically used in URLs and file names. This is the same as
 // url encoding but omits padding characters. Panics on error.
 func MustBase64UrlDecodeNoPadding(value string) string {

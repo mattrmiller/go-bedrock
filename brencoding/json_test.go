@@ -8,29 +8,29 @@ import (
 	"github.com/mattrmiller/go-bedrock/brtesting"
 )
 
-// Test Json encode.
-func TestJsonEncode(tst *testing.T) {
+// Test JSON encode.
+func TestJSONEncode(tst *testing.T) {
 
 	// Test encode
 	payload := map[string]string{
 		"hello": "world",
 	}
-	encoded, err := EncodeJson(payload)
-	brtesting.AssertEqual(tst, encoded, `{"hello":"world"}`, "EncodeJson failed")
-	brtesting.AssertEqual(tst, err, nil, "EncodeJson failed")
+	encoded, err := EncodeJSON(payload)
+	brtesting.AssertEqual(tst, encoded, `{"hello":"world"}`, "EncodeJSON failed")
+	brtesting.AssertEqual(tst, err, nil, "EncodeJSON failed")
 
 	// Test encode pretty
-	encoded, err = EncodeJsonPretty(payload, "      ")
-	brtesting.AssertNotEqual(tst, encoded, `{"hello":"world"}`, "EncodeJsonPretty failed")
-	brtesting.AssertEqual(tst, err, nil, "EncodeJsonPretty failed")
+	encoded, err = EncodeJSONPretty(payload, "      ")
+	brtesting.AssertNotEqual(tst, encoded, `{"hello":"world"}`, "EncodeJSONPretty failed")
+	brtesting.AssertEqual(tst, err, nil, "EncodeJSONPretty failed")
 }
 
-// Test Json decode.
-func TestJsonDecode(tst *testing.T) {
+// Test JSON decode.
+func TestJSONDecode(tst *testing.T) {
 
 	// Test encode
-	payload, err := DecodeJson(`{"hello":"world"}`)
-	brtesting.AssertEqual(tst, payload["hello"].(string), "world", "DecodeJson failed")
-	brtesting.AssertEqual(tst, err, nil, "DecodeJson failed")
+	payload, err := DecodeJSON(`{"hello":"world"}`)
+	brtesting.AssertEqual(tst, payload["hello"].(string), "world", "DecodeJSON failed")
+	brtesting.AssertEqual(tst, err, nil, "DecodeJSON failed")
 
 }
