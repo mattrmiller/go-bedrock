@@ -1,7 +1,7 @@
 # go-bedrock
 The bedrock for your next go project.
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/mattrmiller/go-bedrock)](https://goreportcard.com/report/github.com/mattrmiller/go-bedrock)
+[![Go Report Card](https://goreportcard.com/badge/github.com/mattrmiller/go-bedrock?style=plastic)](https://goreportcard.com/report/github.com/mattrmiller/go-bedrock)
 [![godocs](https://img.shields.io/badge/godocs-reference-blue.svg)](https://godoc.org/github.com/mattrmiller/go-bedrock)
 
 # Mission Statement
